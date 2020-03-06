@@ -193,7 +193,7 @@ From the initial state all lists are empty, and you have options to fill the lis
 
 
 ## Sequence diagrams									
-Author(s): `Patricia Santana Vasquez`
+Author(s): `Patricia Santana Vasquez`, `Noé Rousset`
 
 **Title: Team Creation**
 
@@ -202,6 +202,20 @@ Author(s): `Patricia Santana Vasquez`
 **Elements**
 
 The main goal and focus of this sequence diagram was to show the interaction between the user and the interaction partners/ objects of :game and :team within our fantasy soccer single player game. The sequence diagram above shows how a user can input data to create a team in the game. This part of the system will be executed once the player data is within our game and provided by the user. The user is represented by a stick figure within the sequence diagram with the title “Actor”. The user provided data of players is sent to the interaction partner and object of :game. The :game object is represented as a head of a lifeline. From the game object, the send event of new CreateTeam() is executed and the object of a new team is created. Because this is an example of a creation of a new object within our software system, the Arrowhead is pointing to the head of the :team object and is dashed. This send event points to the interaction partner and object of :team which then executes Game.getInstance().addTeam() once that message is received. This a representation of a receive event within this sequence diagram.Once this receive event is executed, the software system we created will add a team to the game. In the end, this a simple part of the software system but a vital one to the creation of our fantasy soccer game. Without the creation of a team/teams with the use of player data provided by the user/Actor the basic functionality of the game would not be possible. This sequence diagram is representative of the way in which we have focused on implementing a simple and feasible fantasy soccer game.
+
+**Title: League Execution**
+
+![](imgs/Sequence2League.png)
+
+**Elements**
+
+This sequence diagrams shows the interactions between the player and the game to execute the league from a player provided schedule. This sequence happens when all teams have been made and the player starts the league simulation. 
+The player represented by the actor element provides a schedule with all the matches that will play in the first round to the game. 
+
+From this schedule a new League object is created. The league then starts with the playRound function. Here all the scheduled matches are played one by one in the Loop fragment. A match object is created and returns the winner of the match before being destroyed. The winning teams are added to the pool of teams playing next round. 
+
+Once a round is over, the Alt fragment checks if there are more than one remaining team. If yes playRound is called recursively, as shown by the self-call element. The exit condition is one team remaining, and when it is met the results are sent to the game and the league object is destroyed.
+
 
 ## Implementation									
 Author(s): `name of the team member(s) responsible for this section`
