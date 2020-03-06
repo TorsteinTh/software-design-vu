@@ -158,17 +158,17 @@ Author(s): `Torstein Thomassen`
 This object diagram shows an example of objects with different states in our program.
 All the different attributes and variables has to be fulled in with example data.
 
-In this example each team has only three players. This is only for demonstration and will be fixed for the final version.
+In this example each team has only three players. This is only for demonstration and will be changed for the final version.
 
-This structure resembles very a tree structure with branches and leafs. The tree structure is commonly used in many software design. It's an efficient and good way to structure the relation between objects. 
+This structure resembles a tree structure with branches and leafs. The tree structure is commonly used in many software design. It's an efficient and a good way to structure the relation between objects. 
 
-This creates a hierarchy where a parent can only directly affect the children. E.g the **Match** can't affect the **Player** directly, only the **Team**s       
+This creates a hierarchy where a parent can only directly affect the children. E.g the **Match** can't affect the **Player** 'directly', only the **Team** objects.       
 
 `Object diagram over the Match Class`
 ![](imgs/ass2%20obj%20diagram.png)
 
 The diagram above shows an example over the *Match* class. It has a relation with two *Team* object, and the *Team* object again has a relation with various *Player* object
-As you can see *Team 1* would win the match because they have a higher score.  
+As you can see *Team 1* would win the match because they have a higher score. You can also see it's the second round, because both teams have already one win.  
 
 
 
@@ -188,7 +188,8 @@ The state diagram above represents the different states a league can be in. When
 ![](imgs/ass2%20state%20Diagram.png)
 
 Above is shown a state diagram for the **Game** class. You have different methods that effect the three main states the **Game** class consist of.
-From the initial state all lists are empty, and you have options to fill the lists with **Player**s or **Team**s. 
+From the initial state all lists are empty, and you have options to fill the lists with **Player**s or **Team**s.
+ 
 
 
 
@@ -218,7 +219,7 @@ Once a round is over, the Alt fragment checks if there are more than one remaini
 
 
 ## Implementation									
-Author(s): `name of the team member(s) responsible for this section`
+Author(s): `Teona Moga`
 
 The first step in our implementation process was coming up with very basic UML diagrams that outlined the basic classes and functionality required by the system. We followed an Agile approach, where we would go back and forth between our code and the diagrams, until we achieved the desired functionality (the implementation of feature FR6). We also focused on implementing the GUI such that we would be able to integrate it with the back-end and have the league formation feature work not only at a code level but also at a user level. 
 
@@ -230,7 +231,3 @@ Running the main class should result in opening the application as shown below:
 This video shows the execution of the program where we have implemented feature F6. The user can setup a league with different teams and it displays the winner of each game as an output.
  
 We didn't manage to create a JAR although closely following the instructions in both git and the external website provided. 
-
-## References
-
-References, if needed.
