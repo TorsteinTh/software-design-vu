@@ -1,0 +1,19 @@
+
+csquid:UselessImportCheck"3Remove this unused import 'javafx.scene.text.Text'.(˜ÿ‡Üşÿÿÿÿ8‡±àğŒ.
+Ÿsquid:S1186"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(Ÿ®€³8ô÷èğŒ.
+_squid:UselessImportCheck"5Remove this unused import 'controllers.SceneManager'.(áïQ8‡±àğŒ.
+gsquid:UselessImportCheck
+"7Remove this unused import 'javafx.scene.control.Label'.(ö²­ÿÿÿÿÿ8‡±àğŒ.
+`squid:UselessImportCheck"5Remove this unused import 'javafx.scene.paint.Color'.(Ïî£à8‡±àğŒ.
+hsquid:UselessImportCheck"=Remove this unused import 'javafx.collections.FXCollections'.(´¶²Æ8‡±àğŒ.
+`squid:UselessImportCheck"0Remove this unused import 'javafx.geometry.Pos'.(ÌÆ÷Ùøÿÿÿÿ8‡±àğŒ.
+lsquid:MaximumInheritanceDepth"<This class has 7 parents which is greater than 5 authorized.(†ÇŒÖ8Š¾áğŒ.
+ssquid:S00116"ORename this field "GAME" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ùÛÏ¤üÿÿÿÿ8ñêíğŒ.
+esquid:UselessImportCheck"5Remove this unused import 'javafx.scene.layout.VBox'.(íÆáÂùÿÿÿÿ8‡±àğŒ.
+hsquid:UselessImportCheck"8Remove this unused import 'javafx.scene.control.Button'.(Ë Í‹øÿÿÿÿ8‡±àğŒ.
+hsquid:UselessImportCheck"8Remove this unused import 'javafx.application.Platform'.(§“óùÿÿÿÿ8‡±àğŒ.
+¤squid:S1186!"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(Ä¤ëüûÿÿÿÿ8Š³ëğŒ.
+`squid:UselessImportCheck"5Remove this unused import 'javafx.scene.layout.HBox'.(äê…8‡±àğŒ.
+esquid:UselessImportCheck	":Remove this unused import 'javafx.scene.control.ComboBox'.(òÀø¸8‡±àğŒ.
+nsquid:UselessImportCheck">Remove this unused import 'javafx.collections.ObservableList'.(ÄÜ€éüÿÿÿÿ8‡±àğŒ.
+¤squid:S1186"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(Œã§±ıÿÿÿÿ8ë¬åğŒ.

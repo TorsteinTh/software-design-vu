@@ -17,15 +17,32 @@ public class Game {
         allTeams = new ArrayList<>();
     }
 
-    public void addPlayers(String pathToFile){
+    public void addPlayers(Player newPlayer){
         //TODO
+        allPlayers.add(newPlayer);
+    }
+
+    public ArrayList<String> getAllPlayersNames() {
+        return new ArrayList<>(allPlayers.stream().map(player -> player.getName()).collect(Collectors.toList()));
+    }
+
+    public ArrayList<Player> getAllPlayers() {
+        return allPlayers;
+    }
+
+    public Player getPlayerByName(String name){
+
+        for(Player player : allPlayers){
+            if(player.getName().equals(name))
+                return player;
+        }
+        return null;
     }
 
     public void addTeam(Player[] players, String teamName){
         //TODO
         Team newTeam = new Team(players, teamName);
         allTeams.add(newTeam);
-
     }
 
     public void createLeague(Queue<Team> schedule){

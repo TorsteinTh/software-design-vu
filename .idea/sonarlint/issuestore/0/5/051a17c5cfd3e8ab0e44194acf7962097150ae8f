@@ -1,0 +1,22 @@
+
+W
+java:S2864±"4Iterate over the "entrySet" instead of the "keySet".(²ğìşÿÿÿÿ8Í»•¢.
+F
+java:S1481²"(Remove this unused "key" local variable.(²µ€¥8Í»•¢.
+p	java:S116"ORename this field "GAME" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ùÛÏ¤üÿÿÿÿ8Í»•¢.
+]	java:S110"<This class has 7 parents which is greater than 5 authorized.(æ½‘İÿÿÿÿÿ8Í»•¢.
+h	java:S112"FDefine and throw a dedicated exception instead of using a generic one.(ôÌ¿„øÿÿÿÿ8Í»•¢.
+`
+java:S1117"=Rename "teamNames" which hides the field declared at line 33.(¸‚îÊşÿÿÿÿ8Í»•¢.
+]	java:S125z"<This block of commented-out lines of code should be removed.(º Åºùÿÿÿÿ8Í»•¢.
+c	java:S112¥"FDefine and throw a dedicated exception instead of using a generic one.(Ô¯‚­8Í»•¢.
+9
+java:S1643º"Use a StringBuilder instead.(¯ ş`8Í»•¢.
+O
+java:S1612µ",Replace this lambda with a method reference.(éÆúôÿÿÿÿÿ8Í»•¢.
+U
+java:S1854²"7Remove this useless assignment to local variable "key".(²µ€¥8Í»•¢.
+Z
+java:S1128"8Remove this unused import 'javafx.application.Platform'.(§“óùÿÿÿÿ8Í»•¢.
+`
+java:S1128">Remove this unused import 'javafx.collections.ObservableList'.(ÄÜ€éüÿÿÿÿ8Í»•¢.

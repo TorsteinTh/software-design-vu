@@ -15,6 +15,12 @@ public class Main extends Application {
         Player player1 = new Player("Player 1", 1);
         Player player2 = new Player("Player 2", 2);
         Player player3 = new Player("Player 3", 3);
+        Player player4 = new Player("Player 4", 4);
+
+        Game.getInstance().addPlayers(player1);
+        Game.getInstance().addPlayers(player2);
+        Game.getInstance().addPlayers(player3);
+        Game.getInstance().addPlayers(player4);
 
         Player[] team1 = {player1};
         Player[] team2 = {player2};
@@ -33,6 +39,7 @@ public class Main extends Application {
         Game.getInstance().addTeam(team6, "Team 6");
         Game.getInstance().addTeam(team7, "Team 7");
         Game.getInstance().addTeam(team8, "Team 8");
+
 
         //TESTING end
 

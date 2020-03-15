@@ -1,0 +1,27 @@
+
+Š
+java:S1319$"mThe return type of this method should be an interface such as "Map" rather than the implementation "HashMap".(Õ›¬Æ8Í»•¢.
+
+java:S1319)"pThe return type of this method should be an interface such as "List" rather than the implementation "ArrayList".(¶¸ÜÒ8Í»•¢.
+’
+java:S1319."pThe return type of this method should be an interface such as "List" rather than the implementation "ArrayList".(ø¸ºƒúÿÿÿÿ8Í»•¢.
+I
+java:S1612/",Replace this lambda with a method reference.(æŒæ8Í»•¢.
+Q
+java:S1128"4Remove this unused import 'java.lang.reflect.Array'.(‡¡É˜8Í»•¢.
+O
+java:S1135"2Complete the task associated to this TODO comment.(…ïœ†8Í»•¢.
+O
+java:S1135"2Complete the task associated to this TODO comment.(…ïœ†8Í»•¢.
+O
+java:S1135 "2Complete the task associated to this TODO comment.(…ïœ†8Í»•¢.
+O
+java:S1135%"2Complete the task associated to this TODO comment.(…ïœ†8Í»•¢.
+O
+java:S1135*"2Complete the task associated to this TODO comment.(…ïœ†8Í»•¢.
+O
+java:S1135="2Complete the task associated to this TODO comment.(…ïœ†8Í»•¢.
+O
+java:S1135A"2Complete the task associated to this TODO comment.(…ïœ†8Í»•¢.
+P
+java:S1068".Remove this unused "allPlayers" private field.(†¸¡¾ıÿÿÿÿ8Í»•¢.

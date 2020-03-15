@@ -75,6 +75,7 @@ public class MainMenuPane extends GamePane {
     void setCallbacks() {
         // TODO
         leagueSimulatorButton.setOnMouseClicked(event -> SceneManager.getInstance().showPane(LeagueSimulatorPane.class));
+        teamEditorButton.setOnMouseClicked(event -> SceneManager.getInstance().showPane(TeamEditorPane.class));
         quitButton.setOnMouseClicked(mouseEvent -> Platform.exit());
     }
 }

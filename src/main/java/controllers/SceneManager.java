@@ -21,9 +21,12 @@ public class SceneManager {
 
     private final Scene leagueSimulatorScene = new Scene(new LeagueSimulatorPane(), 800, 600);
 
+    private final Scene teamEditorScene = new Scene(new TeamEditorPane(), 500, 700);
+
     private Map<Class<? extends GamePane>, Scene> scenes = new HashMap<Class<? extends GamePane>, Scene>(){{
         put(MainMenuPane.class, mainMenuScene);
         put(LeagueSimulatorPane.class, leagueSimulatorScene);
+        put(TeamEditorPane.class, teamEditorScene);
     }};
 
     /**
