@@ -80,6 +80,7 @@ public class LeagueSimulatorPane extends GamePane {
 
     private HBox matches7and8 = new HBox();
 
+
     public LeagueSimulatorPane() {
         connectComponents();
         styleComponents();
@@ -216,5 +217,25 @@ public class LeagueSimulatorPane extends GamePane {
          });
 
          returnButton.setOnMouseClicked(event -> SceneManager.getInstance().showPane((MainMenuPane.class)));
+    }
+
+    void updateTeams() {
+        teamNames = GAME.getAllTeamNames();
+        comboBox1.setItems(FXCollections.observableList(teamNames));
+        comboBox2.setItems(FXCollections.observableList(teamNames));
+        comboBox3.setItems(FXCollections.observableList(teamNames));
+        comboBox4.setItems(FXCollections.observableList(teamNames));
+        comboBox5.setItems(FXCollections.observableList(teamNames));
+        comboBox6.setItems(FXCollections.observableList(teamNames));
+        comboBox7.setItems(FXCollections.observableList(teamNames));
+        comboBox8.setItems(FXCollections.observableList(teamNames));
+        comboBox9.setItems(FXCollections.observableList(teamNames));
+        comboBox10.setItems(FXCollections.observableList(teamNames));
+        comboBox11.setItems(FXCollections.observableList(teamNames));
+        comboBox12.setItems(FXCollections.observableList(teamNames));
+        comboBox13.setItems(FXCollections.observableList(teamNames));
+        comboBox14.setItems(FXCollections.observableList(teamNames));
+        comboBox15.setItems(FXCollections.observableList(teamNames));
+        comboBox16.setItems(FXCollections.observableList(teamNames));
     }
 }

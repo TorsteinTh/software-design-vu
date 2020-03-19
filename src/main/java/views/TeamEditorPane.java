@@ -247,6 +247,11 @@ public class TeamEditorPane extends GamePane {
         saveButton.setOnMouseClicked(event -> {
             try {
                 this.createTeam();
+                LeagueSimulatorPane pane = SceneManager.getInstance().getPane(LeagueSimulatorPane.class);
+                pane.updateTeams();
+                Text successText = new Text("Team successfully created!");
+                successText.setFill(Color.GREEN);
+                centerContainer.getChildren().add(successText);
             } catch (Exception e) {
                 this.showError("Missing player");
             }
