@@ -57,7 +57,10 @@ public class Game {
 
     public ArrayList<Team>  generateLeaderboard(){
         //TODO
-        return allTeams;
+        ArrayList<Team> leaderboard = (ArrayList<Team>) allTeams.clone();
+        Collections.sort(leaderboard, Comparator.comparingInt(Team::getTotalWins));
+        return leaderboard;
+
     }
 
     public ArrayList<String> getAllTeamNames(){

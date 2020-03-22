@@ -27,6 +27,7 @@ public class League {
             Match match = new Match(teamsToPlay.poll(), teamsToPlay.poll());
             Team winner = match.getMatchWinner();
 
+            winner.addNewWin();
             winners.get(round).add(winner);
 
             nextRoundTeams.add(winner);

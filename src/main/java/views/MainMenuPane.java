@@ -32,9 +32,6 @@ public class MainMenuPane extends GamePane {
         setCallbacks();
     }
 
-    /**
-     * {@inheritDoc}
-     */
     @Override
     void connectComponents() {
         // TODO
@@ -44,9 +41,6 @@ public class MainMenuPane extends GamePane {
 
     }
 
-    /**
-     * {@inheritDoc}
-     */
     @Override
     void styleComponents() {
 
@@ -68,14 +62,16 @@ public class MainMenuPane extends GamePane {
 
     }
 
-    /**
-     * {@inheritDoc}
-     */
     @Override
     void setCallbacks() {
         // TODO
         leagueSimulatorButton.setOnMouseClicked(event -> SceneManager.getInstance().showPane(LeagueSimulatorPane.class));
         teamEditorButton.setOnMouseClicked(event -> SceneManager.getInstance().showPane(TeamEditorPane.class));
+        leaderboardButton.setOnMouseClicked(event -> {
+            LeaderboardPane pane =  SceneManager.getInstance().getPane(LeaderboardPane.class);
+            pane.updateRankings();
+            SceneManager.getInstance().showPane(LeaderboardPane.class);
+        });
         quitButton.setOnMouseClicked(mouseEvent -> Platform.exit());
     }
 }
