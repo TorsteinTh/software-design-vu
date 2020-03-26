@@ -8,8 +8,8 @@ public class Game {
 
     private static final Game GAME_INSTANCE = new Game();
 
-    private ArrayList<Player> allPlayers;
-    private ArrayList<Team> allTeams;
+    private static ArrayList<Player> allPlayers;
+    private static ArrayList<Team> allTeams;
     private League league;
 
     public Game(){
@@ -77,6 +77,10 @@ public class Game {
 
     }
 
+    public static ArrayList<Player> getPlayers(){
+        return allPlayers;
+
+    }
     public void removeTeam(String teamName){
         //TODO
     }

@@ -4,6 +4,9 @@ import javafx.stage.Stage;
 import models.Game;
 import models.Player;
 import views.MainMenuPane;
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Random;
 
 
 public class Main extends Application {
@@ -11,41 +14,46 @@ public class Main extends Application {
     @Override
     public void start(final Stage primaryStage) {
 
-        //Just for TESTING - until we get the user to upload data
-        Player player1 = new Player("Player 1", 1);
-        Player player2 = new Player("Player 2", 2);
-        Player player3 = new Player("Player 3", 3);
-        Player player4 = new Player("Player 4", 4);
+        generatePlayers();
+        generateTeams();
 
-        Game.getInstance().addPlayers(player1);
-        Game.getInstance().addPlayers(player2);
-        Game.getInstance().addPlayers(player3);
-        Game.getInstance().addPlayers(player4);
-
-        Player[] team1 = {player1};
-        Player[] team2 = {player2};
-        Player[] team3 = {player3};
-        Player[] team4 = {player3, player1};
-        Player[] team5 = {player3, player2};
-        Player[] team6 = {player3, player3};
-        Player[] team7 = {player3, player3, player1};
-        Player[] team8 = {player3, player3, player2};
-
-        Game.getInstance().addTeam(team1, "Team 1");
-        Game.getInstance().addTeam(team2, "Team 2");
-        Game.getInstance().addTeam(team3, "Team 3");
-        Game.getInstance().addTeam(team4, "Team 4");
-        Game.getInstance().addTeam(team5, "Team 5");
-        Game.getInstance().addTeam(team6, "Team 6");
-        Game.getInstance().addTeam(team7, "Team 7");
-        Game.getInstance().addTeam(team8, "Team 8");
-
-
-        //TESTING end
 
         SceneManager.getInstance().setStage(primaryStage);
         SceneManager.getInstance().showPane(MainMenuPane.class);
     }
+    public void generatePlayers() {
+        for(int i = 0; i < 100 /*TODO: change to a variable*/; i++){
+            Player tmpPlayer = new Player("Player" + i, getRandomNumberInRange(5, 25));
+            Game.getInstance().addPlayers(tmpPlayer);
+        }
+
+    }
+
+    public void generateTeams(){
+        ArrayList<Player> players = Game.getPlayers();
+
+        for(int i = 0; i < 8; i++){
+            ArrayList<Player> tmpTeam = new ArrayList<Player>();
+
+            /* Adds random player to list */
+            for (int j = 0; j < 11; j++) {
+                tmpTeam.add(players.get(getRandomNumberInRange(0, 99 /*num of players TODO: change to a variable*/)));
+            }
+            Game.getInstance().addTeam(tmpTeam.toArray(new Player[0]), "Team " + i);
+
+        }
+        return;
+    }
+
+    // Function to randomly generate a number between min and max
+    private static int getRandomNumberInRange(int min, int max) {
+        if (min >= max) {
+            throw new IllegalArgumentException("max must be greater than min");
+        }
+        Random r = new Random();
+        return r.nextInt((max - min) + 1) + min;
+    }
+
 
     public static void main(String[] args) {
             Main.launch(args);
