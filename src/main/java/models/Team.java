@@ -36,5 +36,10 @@ public class Team {
         wins++;
     }
 
+    public void setPlayers(Player[] players) {
+        this.players = players;
+        this.score = calculateScore();
+    }
+
 
 }

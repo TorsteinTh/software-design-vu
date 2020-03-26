@@ -40,13 +40,18 @@ public class Game {
     }
 
     public void addTeam(Player[] players, String teamName){
-        //TODO
+
         Team newTeam = new Team(players, teamName);
-        allTeams.add(newTeam);
+        if( this.getTeamByName(teamName) != null ) {
+            this.getTeamByName(teamName).setPlayers(players);
+        } else {
+            allTeams.add(newTeam);
+        }
+
     }
 
     public void createLeague(Queue<Team> schedule){
-        //TODO
+
         league = new League(schedule);
     }
 

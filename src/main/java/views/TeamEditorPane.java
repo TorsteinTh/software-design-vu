@@ -85,6 +85,7 @@ public class TeamEditorPane extends GamePane {
     private HBox playerBox11 = new HBox();
     private HBox errorContainer11 = new HBox();
 
+    Text successText = new Text("Team successfully created!");
 
     public TeamEditorPane() {
         connectComponents();
@@ -125,7 +126,7 @@ public class TeamEditorPane extends GamePane {
         playerBox10.getChildren().addAll(player10, comboBox10, errorContainer10);
         playerBox11.getChildren().addAll(player11, comboBox11, errorContainer11);
 
-        centerContainer.getChildren().addAll(title,playerBox1, playerBox2, playerBox3, playerBox4, playerBox5, playerBox6, playerBox7, playerBox8, playerBox9, playerBox10, playerBox11, saveButton, returnButton);
+        centerContainer.getChildren().addAll(title,playerBox1, playerBox2, playerBox3, playerBox4, playerBox5, playerBox6, playerBox7, playerBox8, playerBox9, playerBox10, playerBox11, saveButton, returnButton, successText);
 
         this.setCenter(centerContainer);
     }
@@ -148,6 +149,8 @@ public class TeamEditorPane extends GamePane {
 
         returnButton.setStyle(bigButton);
         saveButton.setStyle(bigButton);
+        successText.setFill(Color.GREEN);
+        successText.setVisible(false);
     }
 
     private void createTeam() throws Exception {
@@ -249,9 +252,7 @@ public class TeamEditorPane extends GamePane {
                 this.createTeam();
                 LeagueSimulatorPane pane = SceneManager.getInstance().getPane(LeagueSimulatorPane.class);
                 pane.updateTeams();
-                Text successText = new Text("Team successfully created!");
-                successText.setFill(Color.GREEN);
-                centerContainer.getChildren().add(successText);
+                successText.setVisible(true);
             } catch (Exception e) {
                 this.showError("Missing player");
             }
