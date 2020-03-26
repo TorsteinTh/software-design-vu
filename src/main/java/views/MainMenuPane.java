@@ -20,8 +20,6 @@ public class MainMenuPane extends GamePane {
 
     private final Button teamEditorButton = new Button("Team editor");
 
-    private final Button playerEditorButton = new Button("Player editor");
-
     private final Button leaderboardButton = new Button("Leaderboard");
 
     private final Button quitButton = new Button("Quit");
@@ -35,7 +33,7 @@ public class MainMenuPane extends GamePane {
     @Override
     void connectComponents() {
         // TODO
-        container.getChildren().addAll(title, leagueSimulatorButton, leaderboardButton, teamEditorButton, playerEditorButton, quitButton);
+        container.getChildren().addAll(title, leagueSimulatorButton, leaderboardButton, teamEditorButton, quitButton);
         container.setAlignment(Pos.CENTER);
         this.setCenter(container);
 
@@ -56,7 +54,6 @@ public class MainMenuPane extends GamePane {
         leagueSimulatorButton.setStyle(bigButton);
         leaderboardButton.setStyle(bigButton);
         teamEditorButton.setStyle(bigButton);
-        playerEditorButton.setStyle(bigButton);
         quitButton.setStyle(bigButton);
         title.setStyle("-fx-font-size: 25;");
 

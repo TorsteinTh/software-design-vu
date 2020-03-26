@@ -23,7 +23,7 @@ public class Main extends Application {
     }
     public void generatePlayers() {
         for(int i = 0; i < 100 /*TODO: change to a variable*/; i++){
-            Player tmpPlayer = new Player("Player" + i, getRandomNumberInRange(5, 25));
+            Player tmpPlayer = new Player("Player" + i, getRandomNumberInRange(15, 25));
             Game.getInstance().addPlayers(tmpPlayer);
         }
 

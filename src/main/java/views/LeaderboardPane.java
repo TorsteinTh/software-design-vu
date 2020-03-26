@@ -62,7 +62,7 @@ public class LeaderboardPane extends GamePane {
 
         for (int i = 1; i <= leaderboard.size(); i++){
             Team team = leaderboard.get(leaderboard.size() - i);
-            Text teamText = new Text( i + ". " + team.getTeamName() + " (Wins: " + team.getTotalWins() + ")" );
+            Text teamText = new Text( i + ". " + team.getTeamName() + " (Wins: " + team.getTotalWins() + ")" + ", Score: " + team.getTeamScore() );
             rankings.getChildren().add(teamText);
         }
 
