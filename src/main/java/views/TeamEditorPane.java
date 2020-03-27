@@ -26,66 +26,67 @@ public class TeamEditorPane extends GamePane {
     private final Button returnButton = new Button("Return");
     private final Button saveButton = new Button("Save team");
 
-    private ArrayList<String> playerNames = GAME.getAllPlayersNames();
+    private ArrayList<String> playerNamesandScores = GAME.getAllPlayersNames();
     private ArrayList<Player> fullPlayers = GAME.getAllPlayers();
-    private Player[] playerStuff = new Player[11];
+    private Player[] playersToAdd = new Player[11];
 
     private Label player1 = new Label("Player 1: ");
-    ComboBox<String> comboBox1 = new ComboBox<>(FXCollections.observableList(playerNames));
+    ComboBox<String> comboBox1 = new ComboBox<>(FXCollections.observableList(playerNamesandScores));
     private HBox playerBox1 = new HBox();
     private HBox errorContainer1 = new HBox();
 
     private Label player2 = new Label("Player 2: ");
-    ComboBox<String> comboBox2 = new ComboBox<>(FXCollections.observableList(playerNames));
+    ComboBox<String> comboBox2 = new ComboBox<>(FXCollections.observableList(playerNamesandScores));
     private HBox playerBox2 = new HBox();
     private HBox errorContainer2 = new HBox();
 
     private Label player3 = new Label("Player 3: ");
-    ComboBox<String> comboBox3 = new ComboBox<>(FXCollections.observableList(playerNames));
+    ComboBox<String> comboBox3 = new ComboBox<>(FXCollections.observableList(playerNamesandScores));
     private HBox playerBox3 = new HBox();
     private HBox errorContainer3 = new HBox();
 
     private Label player4 = new Label("Player 4: ");
-    ComboBox<String> comboBox4 = new ComboBox<>(FXCollections.observableList(playerNames));
+    ComboBox<String> comboBox4 = new ComboBox<>(FXCollections.observableList(playerNamesandScores));
     private HBox playerBox4 = new HBox();
     private HBox errorContainer4 = new HBox();
 
     private Label player5 = new Label("Player 5: ");
-    ComboBox<String> comboBox5 = new ComboBox<>(FXCollections.observableList(playerNames));
+    ComboBox<String> comboBox5 = new ComboBox<>(FXCollections.observableList(playerNamesandScores));
     private HBox playerBox5 = new HBox();
     private HBox errorContainer5 = new HBox();
 
     private Label player6 = new Label("Player 6: ");
-    ComboBox<String> comboBox6 = new ComboBox<>(FXCollections.observableList(playerNames));
+    ComboBox<String> comboBox6 = new ComboBox<>(FXCollections.observableList(playerNamesandScores));
     private HBox playerBox6 = new HBox();
     private HBox errorContainer6 = new HBox();
 
     private Label player7 = new Label("Player 7: ");
-    ComboBox<String> comboBox7 = new ComboBox<>(FXCollections.observableList(playerNames));
+    ComboBox<String> comboBox7 = new ComboBox<>(FXCollections.observableList(playerNamesandScores));
     private HBox playerBox7 = new HBox();
     private HBox errorContainer7 = new HBox();
 
     private Label player8 = new Label("Player 8: ");
-    ComboBox<String> comboBox8 = new ComboBox<>(FXCollections.observableList(playerNames));
+    ComboBox<String> comboBox8 = new ComboBox<>(FXCollections.observableList(playerNamesandScores));
     private HBox playerBox8 = new HBox();
     private HBox errorContainer8 = new HBox();
 
     private Label player9 = new Label("Player 9: ");
-    ComboBox<String> comboBox9 = new ComboBox<>(FXCollections.observableList(playerNames));
+    ComboBox<String> comboBox9 = new ComboBox<>(FXCollections.observableList(playerNamesandScores));
     private HBox playerBox9 = new HBox();
     private HBox errorContainer9 = new HBox();
 
     private Label player10 = new Label("Player 10: ");
-    ComboBox<String> comboBox10 = new ComboBox<>(FXCollections.observableList(playerNames));
+    ComboBox<String> comboBox10 = new ComboBox<>(FXCollections.observableList(playerNamesandScores));
     private HBox playerBox10 = new HBox();
     private HBox errorContainer10 = new HBox();
 
     private Label player11 = new Label("Player 11: ");
-    ComboBox<String> comboBox11 = new ComboBox<>(FXCollections.observableList(playerNames));
+    ComboBox<String> comboBox11 = new ComboBox<>(FXCollections.observableList(playerNamesandScores));
     private HBox playerBox11 = new HBox();
     private HBox errorContainer11 = new HBox();
 
     Text successText = new Text("Team successfully created!");
+    Text dupMessage = new Text("There are duplicate players");
 
     public TeamEditorPane() {
         connectComponents();
@@ -95,24 +96,22 @@ public class TeamEditorPane extends GamePane {
 
     @Override
     void connectComponents() {
-
-        ArrayList<String> playerNames = GAME.getAllPlayersNames();
-
+        
         for (int i = 0; i < fullPlayers.size(); i++){
-            playerNames.set(i, fullPlayers.get(i).getName() + ", Score: " + fullPlayers.get(i).getScore());
+            playerNamesandScores.set(i, fullPlayers.get(i).getName() + ", Score: " + fullPlayers.get(i).getScore());
         }
 
-        comboBox1 = new ComboBox<>(FXCollections.observableList(playerNames));
-        comboBox2 = new ComboBox<>(FXCollections.observableList(playerNames));
-        comboBox3 = new ComboBox<>(FXCollections.observableList(playerNames));
-        comboBox4 = new ComboBox<>(FXCollections.observableList(playerNames));
-        comboBox5 = new ComboBox<>(FXCollections.observableList(playerNames));
-        comboBox6 = new ComboBox<>(FXCollections.observableList(playerNames));
-        comboBox7 = new ComboBox<>(FXCollections.observableList(playerNames));
-        comboBox8 = new ComboBox<>(FXCollections.observableList(playerNames));
-        comboBox9 = new ComboBox<>(FXCollections.observableList(playerNames));
-        comboBox10 = new ComboBox<>(FXCollections.observableList(playerNames));
-        comboBox11 = new ComboBox<>(FXCollections.observableList(playerNames));
+        comboBox1 = new ComboBox<>(FXCollections.observableList(playerNamesandScores));
+        comboBox2 = new ComboBox<>(FXCollections.observableList(playerNamesandScores));
+        comboBox3 = new ComboBox<>(FXCollections.observableList(playerNamesandScores));
+        comboBox4 = new ComboBox<>(FXCollections.observableList(playerNamesandScores));
+        comboBox5 = new ComboBox<>(FXCollections.observableList(playerNamesandScores));
+        comboBox6 = new ComboBox<>(FXCollections.observableList(playerNamesandScores));
+        comboBox7 = new ComboBox<>(FXCollections.observableList(playerNamesandScores));
+        comboBox8 = new ComboBox<>(FXCollections.observableList(playerNamesandScores));
+        comboBox9 = new ComboBox<>(FXCollections.observableList(playerNamesandScores));
+        comboBox10 = new ComboBox<>(FXCollections.observableList(playerNamesandScores));
+        comboBox11 = new ComboBox<>(FXCollections.observableList(playerNamesandScores));
 
         playerBox1.getChildren().addAll(player1, comboBox1, errorContainer1);
         playerBox2.getChildren().addAll(player2, comboBox2, errorContainer2);
@@ -126,7 +125,7 @@ public class TeamEditorPane extends GamePane {
         playerBox10.getChildren().addAll(player10, comboBox10, errorContainer10);
         playerBox11.getChildren().addAll(player11, comboBox11, errorContainer11);
 
-        centerContainer.getChildren().addAll(title,playerBox1, playerBox2, playerBox3, playerBox4, playerBox5, playerBox6, playerBox7, playerBox8, playerBox9, playerBox10, playerBox11, saveButton, returnButton, successText);
+        centerContainer.getChildren().addAll(title, dupMessage, playerBox1, playerBox2, playerBox3, playerBox4, playerBox5, playerBox6, playerBox7, playerBox8, playerBox9, playerBox10, playerBox11, saveButton, returnButton, successText);
 
         this.setCenter(centerContainer);
     }
@@ -151,6 +150,8 @@ public class TeamEditorPane extends GamePane {
         saveButton.setStyle(bigButton);
         successText.setFill(Color.GREEN);
         successText.setVisible(false);
+        dupMessage.setFill(Color.RED);
+        dupMessage.setVisible(false);
     }
 
     private void createTeam() throws Exception {
@@ -165,19 +166,30 @@ public class TeamEditorPane extends GamePane {
         errorContainer9.getChildren().clear();
         errorContainer10.getChildren().clear();
         errorContainer11.getChildren().clear();
+        dupMessage.setVisible(false);
+
+        for(int i = 0; i < playersToAdd.length; i++){
+            playersToAdd[i] = null;
+        }
 
         String[] chosenPlayers = getChosenPlayers();
 
         for(int i = 0; i < chosenPlayers.length; i++){
             if(chosenPlayers[i] != null) {
                 String name = chosenPlayers[i].substring(0, chosenPlayers[i].indexOf(","));
-                playerStuff[i] = (GAME.getPlayerByName(name));
+
+                List<Player> playerList = Arrays.asList(playersToAdd);
+                if(playerList.contains(GAME.getPlayerByName(name))) {
+                    throw new Exception("Duplicate player");
+                }
+                else
+                    playersToAdd[i] = (GAME.getPlayerByName(name));
             }
             else
                 throw new Exception("Field empty");
         }
 
-        GAME.addTeam(playerStuff, "Your Team");
+        GAME.addTeam(playersToAdd, "Your Team");
     }
 
     String[] getChosenPlayers() {
@@ -197,50 +209,23 @@ public class TeamEditorPane extends GamePane {
 
     private void showError( String text ){
         String[] players = getChosenPlayers();
+        HBox[] errorBoxes = {errorContainer1,errorContainer2,errorContainer3,errorContainer4,errorContainer5,errorContainer6,errorContainer7,errorContainer8,errorContainer9,errorContainer10,errorContainer11};
+
+        dupMessage.setVisible(false);
 
         for(int i = 0; i < players.length; i++){
             if(players[i] == null){
+                HBox boxToChange = new HBox();
                 Text errorText = new Text(text);
                 errorText.setFill(Color.RED);
-                HBox boxToChange = new HBox();
-
-                switch (i){
-                    case 0:
-                        boxToChange = errorContainer1;
-                        break;
-                    case 1:
-                        boxToChange = errorContainer2;
-                        break;
-                    case 2:
-                        boxToChange = errorContainer3;
-                        break;
-                    case 3:
-                        boxToChange = errorContainer4;
-                        break;
-                    case 4:
-                        boxToChange = errorContainer5;
-                        break;
-                    case 5:
-                        boxToChange = errorContainer6;
-                        break;
-                    case 6:
-                        boxToChange = errorContainer7;
-                        break;
-                    case 7:
-                        boxToChange = errorContainer8;
-                        break;
-                    case 8:
-                        boxToChange = errorContainer9;
-                        break;
-                    case 9:
-                        boxToChange = errorContainer10;
-                        break;
-                    case 10:
-                        boxToChange = errorContainer11;
-                        break;
+                errorBoxes[i].getChildren().add(errorText);
+            }
+            else if(players[i] != null) {
+                for (int y = 0; y < i; y++) {
+                    if(players[y] == players[i]) {
+                        dupMessage.setVisible(true);
+                    }
                 }
-                boxToChange.getChildren().clear();
-                boxToChange.getChildren().add(errorText);
             }
         }
     }
@@ -254,7 +239,7 @@ public class TeamEditorPane extends GamePane {
                 pane.updateTeams();
                 successText.setVisible(true);
             } catch (Exception e) {
-                this.showError("Missing player");
+                this.showError(e.getMessage());
             }
         });
 
