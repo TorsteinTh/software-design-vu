@@ -23,7 +23,7 @@ public class SceneManager {
 
     private final Scene leaderboardScene = new Scene(new LeaderboardPane(), 800 / 2.0, 600);
 
-    private final Scene teamEditorScene = new Scene(new TeamEditorPane(), 500, 700);
+    private final Scene teamEditorScene = new Scene(new TeamEditorPane(), 400, 750);
 
     private Map<Class<? extends GamePane>, Scene> scenes = new HashMap<Class<? extends GamePane>, Scene>(){{
         put(MainMenuPane.class, mainMenuScene);
