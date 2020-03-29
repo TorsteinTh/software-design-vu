@@ -65,18 +65,15 @@ This chapter is composed of a UML object diagram of your system, together with a
 Maximum number of words for this section: 1000
 
 ## State machine diagrams									
-Author(s): `name of the team member(s) responsible for this section`
+Author(s): `Torstein Thomassen` & `Teona Moga`
 
-This chapter contains the specification of at least 2 UML state machines of your system, together with a textual description of all their elements. Also, remember that classes the describe only data structures (e.g., Coordinate, Position) do not need to have an associated state machine since they can be seen as simple "data containers" without behaviour (they have only stateless objects).
+The state diagrams of the **Game** and **League** classes are shown below.
 
-For each state machine you have to provide:
-- the name of the class for which you are representing the internal behavior;
-- a figure representing the part of state machine;
-- a textual description of all its states, transitions, activities, etc. in a narrative manner (you do not need to structure your description into tables in this case). We expect 3-4 lines of text for describing trivial or very simple state machines (e.g., those with one to three states), whereas you will provide longer descriptions (e.g., ~500 words) when describing more complex state machines.
+`State diagram over League Class`
+![](imgs/LeagueState-A3.jpg)
 
-The goal of your state machine diagrams is both descriptive and prescriptive, so put the needed level of detail here, finding the right trade-off between understandability of the models and their precision.
+The state diagram above represents the different states a league can be in. When it is initialized, no rounds are played so the *winners* map is empty; the *initialTeams* attribute represents the league schedule and is instantiated in the constructor to the parameter passed by the **Game** class. **League** has one recursive method, called when the results of the created schedule, i.e. **initialTeams**, are requested. What breaks the recursion is having no more matches to play in a subsequent round, as there is only one team left (the winner of the league).
 
-Maximum number of words for this section: 4000
 
 ## Sequence diagrams									
 Author(s): `name of the team member(s) responsible for this section`
