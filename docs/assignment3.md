@@ -18,18 +18,31 @@ Author(s): `name of the team member(s) responsible for this section`
 
 `Figure representing the UML class diagram in which all the applied design patterns are highlighted graphically (for example with a red rectangle/circle with a reference to the ID of the applied design pattern`
 
-For each application of any design pattern you have to provide a table conforming to the template below.
 
-| ID  | DP1  |
-|---|---|
-| **Design pattern**  | Name of the applied pattern |
-| **Problem**  | A paragraph describing the problem you want to solve |
-| **Solution**  | A paragraph describing why with the application of the design pattern you solve the identified problem |
-| **Intended use**  | A paragraph describing how you intend to use at run-time the objects involved in the applied design patterns (you can refer to small sequence diagrams here if you want to detail how the involved parties interact at run-time |
-| **Constraints**  | Any additional constraints that the application of the design pattern is imposing, if any |
-| **Additional remarks**  | Optional, only if needed |
+| ID  | DP1  |  
+|---|---|  
+| **Design pattern** | Singleton |  
+| **Problem** | The **Game** class controls access to shared objects such as the team and player lists. Other classes including the GUI call the **Game** class to access these resources, such that it is necessary that there exists only one instance in order to maintain consistency. |  
+| **Solution** | By making **Game** a singleton class, we ensure the other classes calling it are accesing the same object and information is consistent across the system, e.g. every class has access to the same list of teams. |  
+| **Intended use** | Classes accessing information inside **Game** are doing so via an unique **GAME_INSTANCE**.  |  
+| **Constraints** | N/A |  
 
-Maximum number of words for this section: 2000
+| ID  | DP2  |  
+|---|---|  
+| **Design pattern** | Singleton |  
+| **Problem** | Managing scene switching in JavaFX|  
+| **Solution** | We created a **SceneManager** to address the switching between the 4 different panes we display as part of our GUI. We need a unique instance of this class as every pane is initalized within it. |  
+| **Intended use** | Whenever a different pane must be loaded, the system calls the **SceneManager** instance rather than loading a pane directly.  |  
+| **Constraints** | N/A |  
+
+| ID  | DP3  |  
+|---|---|  
+| **Design pattern** | Chain of responsibility |  
+| **Problem** | |  
+| **Solution** | |  
+| **Intended use** |  |  
+| **Constraints** |  |  
+
 
 ## Class diagram									
 Author(s): `name of the team member(s) responsible for this section`
