@@ -7,12 +7,14 @@ import java.util.Queue;
 
 public class League {
 
+    private int leagueId;
     private Queue<Team> initialTeams;
     private HashMap<Integer, ArrayList<Team>> winners;
 
-    public League(Queue<Team> initialTeams){
+    public League(Queue<Team> initialTeams, int leagueId){
         this.initialTeams = initialTeams;
         this.winners = new HashMap<>();
+        this.leagueId = leagueId;
     }
 
     private void playRound(Queue<Team> teamsToPlay, int round){
@@ -37,6 +39,10 @@ public class League {
             playRound(nextRoundTeams, round + 1);
         }
 
+    }
+
+    public int getId() {
+        return leagueId;
     }
 
     public HashMap<Integer, ArrayList<Team>> getWinners(){

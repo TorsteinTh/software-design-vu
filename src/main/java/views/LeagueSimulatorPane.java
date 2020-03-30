@@ -86,6 +86,8 @@ public class LeagueSimulatorPane extends GamePane {
 
     private HBox matches7and8 = new HBox();
 
+    int currentLeagueId = 0;
+
 
     public LeagueSimulatorPane() {
         connectComponents();
@@ -198,14 +200,14 @@ public class LeagueSimulatorPane extends GamePane {
                 throw new Exception("Field empty");
         }
 
-        GAME.createLeague(schedule);
+        GAME.createLeague(schedule, currentLeagueId);
 
     }
 
 
     void displayWinners() {
 
-        HashMap<Integer, ArrayList<Team>> winners = GAME.getLeagueResults();
+        HashMap<Integer, ArrayList<Team>> winners = GAME.getLeagueResults(currentLeagueId);
 
         for (int round: winners.keySet()){
             int key = round;
@@ -227,6 +229,7 @@ public class LeagueSimulatorPane extends GamePane {
         }
 
         centerContainer.getChildren().remove(centerContainer.getChildren().size() - 1);
+        currentLeagueId++;
 
     }
 
