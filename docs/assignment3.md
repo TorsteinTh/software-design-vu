@@ -66,13 +66,14 @@ In this document you have to adhere to the following formatting conventions:
 Maximum number of words for this section: 4000
 
 ## Object diagrams								
-Author(s): `name of the team member(s) responsible for this section`
+Author(s): `Torstein Thomassen`
 
 This chapter contains the description of a "snapshot" of the status of your system during its execution. 
 This chapter is composed of a UML object diagram of your system, together with a textual description of its key elements.
 
 `Figure representing the UML class diagram`
   
+![](imgs/ass3 objDiagram.png)
 `Textual description`
 
 Maximum number of words for this section: 1000
@@ -87,6 +88,11 @@ The state diagrams of the **Game** and **League** classes are shown below.
 
 The state diagram above represents the different states a league can be in. When it is initialized, no rounds are played so the *winners* map is empty; the *initialTeams* attribute represents the league schedule and is instantiated in the constructor to the parameter passed by the **Game** class. **League** has one recursive method, called when the results of the created schedule, i.e. **initialTeams**, are requested. What breaks the recursion is having no more matches to play in a subsequent round, as there is only one team left (the winner of the league).
 
+
+`State diagram over Game Class`
+![](imgs/ass3 stateDiagram Game.png)
+
+The state diagram above represents the state a Game can be in. 
 
 ## Sequence diagrams									
 Author(s): `name of the team member(s) responsible for this section`

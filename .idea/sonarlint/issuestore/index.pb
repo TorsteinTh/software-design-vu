@@ -17,8 +17,6 @@ O
 src/main/java/models/Match.java,5\4\543fe9f71e601ad80a75bf792a2143e5961e3f7b
 [
 +src/main/java/controllers/SceneManager.java,2\0\201a51ca68cf4d72249fb5c370cc5b0fb6b3f305
-Y
-)src/main/java/views/PlayerEditorPane.java,1\b\1b5191354732d993a0f977c2388a78945deb6fe8
 P
  src/main/java/models/League.java,4\2\428ae65a77899ad06f5cfa76bfc2f6ee3661463d
 W
