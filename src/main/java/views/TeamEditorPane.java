@@ -155,17 +155,12 @@ public class TeamEditorPane extends GamePane {
     }
 
     private void createTeam() throws Exception {
-        errorContainer1.getChildren().clear();
-        errorContainer2.getChildren().clear();
-        errorContainer3.getChildren().clear();
-        errorContainer4.getChildren().clear();
-        errorContainer5.getChildren().clear();
-        errorContainer6.getChildren().clear();
-        errorContainer7.getChildren().clear();
-        errorContainer8.getChildren().clear();
-        errorContainer9.getChildren().clear();
-        errorContainer10.getChildren().clear();
-        errorContainer11.getChildren().clear();
+        HBox[] errorBoxes = {errorContainer1,errorContainer2,errorContainer3,errorContainer4,errorContainer5,errorContainer6,errorContainer7,errorContainer8,errorContainer9,errorContainer10,errorContainer11};
+
+        for(HBox errorBox: errorBoxes){
+            errorBox.getChildren().clear();
+        }
+
         dupMessage.setVisible(false);
 
         for(int i = 0; i < playersToAdd.length; i++){
@@ -177,7 +172,6 @@ public class TeamEditorPane extends GamePane {
         for(int i = 0; i < chosenPlayers.length; i++){
             if(chosenPlayers[i] != null) {
                 String name = chosenPlayers[i].substring(0, chosenPlayers[i].indexOf(","));
-
                 List<Player> playerList = Arrays.asList(playersToAdd);
                 if(playerList.contains(GAME.getPlayerByName(name))) {
                     throw new Exception("Duplicate player");
@@ -188,7 +182,6 @@ public class TeamEditorPane extends GamePane {
             else
                 throw new Exception("Field empty");
         }
-
         GAME.addTeam(playersToAdd, "Your Team");
     }
 
