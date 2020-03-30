@@ -86,7 +86,7 @@ The state diagrams of the **Game** and **League** classes are shown below.
 `State diagram over League Class`
 ![](imgs/LeagueState-A3.jpg)
 
-The state diagram above represents the different states a league can be in. When it is initialized, no rounds are played so the *winners* map is empty; the *initialTeams* attribute represents the league schedule and **leagueId** represents an unique id for the given league, both are instantiated in the constructor to the parameters passed by the **Game** class. **League** has one recursive method, called when the results of the created schedule, i.e. **initialTeams**, are requested. What breaks the recursion is having no more matches to play in a subsequent round, as there is only one team left (the winner of the league).
+The state diagram above represents the different states a league can be in. When it is initialized, no rounds are played so the *winners* map is empty; the *initialTeams* attribute represents the league schedule and *leagueId* represents an unique id for the given league, both are instantiated in the constructor to the parameters passed by the **Game** class. **League** has one recursive method, called when the results of the created schedule, i.e. *initialTeams*, are requested. What breaks the recursion is having no more matches to play in a subsequent round, as there is only one team left (the winner of the league).
 
 
 `State diagram over Game Class`
