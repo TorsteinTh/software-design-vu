@@ -215,7 +215,6 @@ public class TeamEditorPane extends GamePane {
 
         for(int i = 0; i < players.length; i++){
             if(players[i] == null){
-                HBox boxToChange = new HBox();
                 Text errorText = new Text(text);
                 errorText.setFill(Color.RED);
                 errorBoxes[i].getChildren().add(errorText);
@@ -239,7 +238,7 @@ public class TeamEditorPane extends GamePane {
                 pane.updateTeams();
                 successText.setVisible(true);
             } catch (Exception e) {
-                this.showError(e.getMessage());
+                this.showError("Field empty");
             }
         });
 
