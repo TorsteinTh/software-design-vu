@@ -23,3 +23,7 @@ W
 'src/main/java/views/TeamEditorPane.java,4\c\4cda84d6210a9204d7ca0b1b37e7a46c245a1ed9
 U
 %src/main/java/views/MainMenuPane.java,5\4\5490d882fd422644e42783803940e4f484bb7ec9
+N
+src/main/java/models/Team.java,a\5\a5aab961d2a40f86fa47eba8ecd7fb75c93e8ccb
+C
+docs/assignment3.md,0\4\044d235d1825ed454feb6d172bace9a16c6c14d5

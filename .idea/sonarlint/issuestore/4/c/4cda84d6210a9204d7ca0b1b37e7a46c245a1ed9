@@ -1,9 +1,12 @@
 
-l
-java:S1192L"JDefine a constant instead of duplicating this literal "Player 8:" 3 times.(ø–’¦úÿÿÿÿ8†§ÖÍ.
-p	java:S116"ORename this field "GAME" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ùÛÏ¤üÿÿÿÿ8Í»•¢.
-Z
-java:S1128"8Remove this unused import 'javafx.application.Platform'.(§“óùÿÿÿÿ8Í»•¢.
-`
-java:S1128">Remove this unused import 'javafx.collections.ObservableList'.(ÄÜ€éüÿÿÿÿ8Í»•¢.
-W	java:S110"<This class has 7 parents which is greater than 5 authorized.(ãúİ8Í»•¢.
+c	java:S112"FDefine and throw a dedicated exception instead of using a generic one.(ÆÛ†¿8èÈ¿ò‘.
+W
+java:S4973Ù"9Use the "equals" method if value comparison was intended.(üú™Ã8ÿ…ó‘.
+p	java:S116"ORename this field "GAME" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ùÛÏ¤üÿÿÿÿ8Í»•¢.
+c	java:S112±"FDefine and throw a dedicated exception instead of using a generic one.(ïñ¡ù8èÈ¿ò‘.
+d
+java:S3027®"FPut single-quotes around ',' to use the faster "indexOf(char)" method.(è–õ8èÈ¿ò‘.
+W	java:S110"<This class has 7 parents which is greater than 5 authorized.(ãúİ8Í»•¢.
+c	java:S112·"FDefine and throw a dedicated exception instead of using a generic one.(Ô¯‚­8èÈ¿ò‘.
+‚
+java:S1488½"_Immediately return this expression instead of assigning it to the temporary variable "players".(û§‡½ÿÿÿÿÿ8èÈ¿ò‘.

@@ -109,6 +109,9 @@ The goal of your sequence diagrams is both descriptive and prescriptive, so put 
 Maximum number of words for this section: 4000
 
 `Sequence diagram showing League creation and execution`
+![](imgs/teamcreation.png)
+
+`Sequence diagram showing League creation and execution`
 ![](imgs/Sequence2League.png)
 
 This sequence diagrams shows the interactions between the player and the game to execute the league from a player provided schedule. This sequence happens when all teams have been made and the player starts the league simulation. 
@@ -118,7 +121,6 @@ From this schedule a new League object is created. The league then starts with t
 
 
 Once a round is over, the Alt fragment checks if there are more than one remaining team. If yes playRound is called recursively, as shown by the self-call element. The exit condition is one team remaining, and when it is met the results are sent to the game and the league object is destroyed.
-
 
 
 ## Implementation									
