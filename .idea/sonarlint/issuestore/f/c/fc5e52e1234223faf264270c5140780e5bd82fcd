@@ -1,27 +1,33 @@
 
-Š
-java:S1319$"mThe return type of this method should be an interface such as "Map" rather than the implementation "HashMap".(Õ›¬Æ8Í»•¢.
-
-java:S1319)"pThe return type of this method should be an interface such as "List" rather than the implementation "ArrayList".(¶¸ÜÒ8Í»•¢.
-’
-java:S1319."pThe return type of this method should be an interface such as "List" rather than the implementation "ArrayList".(ø¸ºƒúÿÿÿÿ8Í»•¢.
 I
-java:S1612/",Replace this lambda with a method reference.(æŒæ8Í»•¢.
+java:S1612L",Replace this lambda with a method reference.(æŒæ8Óü²‘.
 Q
 java:S1128"4Remove this unused import 'java.lang.reflect.Array'.(‡¡É˜8Í»•¢.
 O
-java:S1135"2Complete the task associated to this TODO comment.(…ïœ†8Í»•¢.
+java:S1135D"2Complete the task associated to this TODO comment.(…ïœ†8Óü²‘.
+
+java:S1319"pThe return type of this method should be an interface such as "List" rather than the implementation "ArrayList".(ò¿—ì8¸‰Ğé’.
+N
+java:S1612",Replace this lambda with a method reference.(‡‘ñÿÿÿÿÿ8¸‰Ğé’.
+
+java:S4144Y"]Update this method so that its implementation is not identical to "getAllPlayers" on line 30.(ü˜æ“úÿÿÿÿ8Óü²‘.
 O
-java:S1135"2Complete the task associated to this TODO comment.(…ïœ†8Í»•¢.
+java:S1135^"2Complete the task associated to this TODO comment.(…ïœ†8Ó´õ.
+B
+java:S3010"%Remove this assignment of "allTeams".(Í¨¸8¸‰Ğé’.
+’
+java:S1319Y"pThe return type of this method should be an interface such as "List" rather than the implementation "ArrayList".(ü˜æ“úÿÿÿÿ8Óü²‘.
 O
-java:S1135 "2Complete the task associated to this TODO comment.(…ïœ†8Í»•¢.
+java:S1135"2Complete the task associated to this TODO comment.(…ïœ†8¸‰Ğé’.
+I
+java:S3010"'Remove this assignment of "allPlayers".(¹¯ Æüÿÿÿÿ8¸‰Ğé’.
+
+java:S1319;"mThe return type of this method should be an interface such as "Map" rather than the implementation "HashMap".(ÿ›§¯úÿÿÿÿ8¸‰Ğé’.
+
+java:S1319C"pThe return type of this method should be an interface such as "List" rather than the implementation "ArrayList".(¶¸ÜÒ8Óü²‘.
+’
+java:S1319K"pThe return type of this method should be an interface such as "List" rather than the implementation "ArrayList".(ø¸ºƒúÿÿÿÿ8Óü²‘.
 O
-java:S1135%"2Complete the task associated to this TODO comment.(…ïœ†8Í»•¢.
-O
-java:S1135*"2Complete the task associated to this TODO comment.(…ïœ†8Í»•¢.
-O
-java:S1135="2Complete the task associated to this TODO comment.(…ïœ†8Í»•¢.
-O
-java:S1135A"2Complete the task associated to this TODO comment.(…ïœ†8Í»•¢.
-P
-java:S1068".Remove this unused "allPlayers" private field.(†¸¡¾ıÿÿÿÿ8Í»•¢.
+java:S1135b"2Complete the task associated to this TODO comment.(…ïœ†8Ó´õ.
+
+java:S1319"pThe return type of this method should be an interface such as "List" rather than the implementation "ArrayList".(Ù‡Â8¸‰Ğé’.

@@ -1,5 +1,14 @@
 
+b
+java:S3252="EUse static access with "javafx.application.Application" for "launch".(²ôó8Í»•¢.
+8
+java:S3626/"Remove this redundant jump.(ûÁİ…8“„ü²‘.
+;
+java:S21197"Save and re-use this "Random".(¡Å”¦8“„ü²‘.
 7
 java:S1220""Move this file to a named package.8Í»•¢.
-b
-java:S3252,"EUse static access with "javafx.application.Application" for "launch".(²ôó8Í»•¢.
+M
+java:S1128
+"+Remove this unused import 'java.util.List'.(Õë±Äøÿÿÿÿ8¾Ú÷ı’.
+{
+java:S2293'"YReplace the type specification in this constructor call with the diamond operator ("<>").(´ùŞıÿÿÿÿ8¾Ú÷ı’.
