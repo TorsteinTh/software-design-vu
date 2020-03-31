@@ -116,6 +116,7 @@ The player represented by the actor element provides a schedule with all the mat
 
 From this schedule a new League object is created. The league then starts with the playRound function. Here all the scheduled matches are played one by one in the Loop fragment. A match object is created and returns the winner of the match before being destroyed. The winning teams are added to the pool of teams playing next round. 
 
+
 Once a round is over, the Alt fragment checks if there are more than one remaining team. If yes playRound is called recursively, as shown by the self-call element. The exit condition is one team remaining, and when it is met the results are sent to the game and the league object is destroyed.
 
 
