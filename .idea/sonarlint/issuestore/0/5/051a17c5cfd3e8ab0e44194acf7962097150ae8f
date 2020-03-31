@@ -1,24 +1,24 @@
 
-`
-java:S1128">Remove this unused import 'javafx.collections.ObservableList'.(ÄÜ€éüÿÿÿÿ8Í»•¢.
-Z
-java:S1128"8Remove this unused import 'javafx.application.Platform'.(§“óùÿÿÿÿ8Í»•¢.
-]	java:S110"<This class has 7 parents which is greater than 5 authorized.(æ½‘İÿÿÿÿÿ8ŒˆĞé’.
-c	java:S112È"FDefine and throw a dedicated exception instead of using a generic one.(Ô¯‚­8ŒˆĞé’.
-h	java:S112œ"FDefine and throw a dedicated exception instead of using a generic one.(ôÌ¿„øÿÿÿÿ8ŒˆĞé’.
-9
-java:S1643İ"Use a StringBuilder instead.(¯ ş`8ŒˆĞé’.
-O
-java:S1612Ø",Replace this lambda with a method reference.(éÆúôÿÿÿÿÿ8ŒˆĞé’.
-Q
-java:S1128"4Remove this unused import 'java.lang.reflect.Array'.(‡¡É˜8ŒˆĞé’.
-p	java:S116"ORename this field "GAME" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ùÛÏ¤üÿÿÿÿ8ŒˆĞé’.
 [
 java:S1117 "=Rename "teamNames" which hides the field declared at line 39.(˜Ó¾ñ8ŒˆĞé’.
-U
-java:S1854Õ"7Remove this useless assignment to local variable "key".(²µ€¥8ŒˆĞé’.
-W
-java:S2864Ô"4Iterate over the "entrySet" instead of the "keySet".(²ğìşÿÿÿÿ8ŒˆĞé’.
+]	java:S110"<This class has 7 parents which is greater than 5 authorized.(æ½‘İÿÿÿÿÿ8ŒˆĞé’.
+Z
+java:S1128"8Remove this unused import 'javafx.application.Platform'.(§“óùÿÿÿÿ8Í»•¢.
 F
 java:S1481Õ"(Remove this unused "key" local variable.(²µ€¥8ŒˆĞé’.
+Q
+java:S1128"4Remove this unused import 'java.lang.reflect.Array'.(‡¡É˜8ŒˆĞé’.
+O
+java:S1612Ø",Replace this lambda with a method reference.(éÆúôÿÿÿÿÿ8ŒˆĞé’.
+U
+java:S1854Õ"7Remove this useless assignment to local variable "key".(²µ€¥8ŒˆĞé’.
 ^	java:S125‡"<This block of commented-out lines of code should be removed.(º Åºùÿÿÿÿ8ŒˆĞé’.
+h	java:S112œ"FDefine and throw a dedicated exception instead of using a generic one.(ôÌ¿„øÿÿÿÿ8ŒˆĞé’.
+p	java:S116"ORename this field "GAME" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ùÛÏ¤üÿÿÿÿ8ŒˆĞé’.
+`
+java:S1128">Remove this unused import 'javafx.collections.ObservableList'.(ÄÜ€éüÿÿÿÿ8Í»•¢.
+c	java:S112È"FDefine and throw a dedicated exception instead of using a generic one.(Ô¯‚­8ŒˆĞé’.
+W
+java:S2864Ô"4Iterate over the "entrySet" instead of the "keySet".(²ğìşÿÿÿÿ8ŒˆĞé’.
+9
+java:S1643İ"Use a StringBuilder instead.(¯ ş`8ŒˆĞé’.

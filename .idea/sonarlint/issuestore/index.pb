@@ -27,3 +27,5 @@ N
 src/main/java/models/Team.java,a\5\a5aab961d2a40f86fa47eba8ecd7fb75c93e8ccb
 C
 docs/assignment3.md,0\4\044d235d1825ed454feb6d172bace9a16c6c14d5
+S
+#.idea/sonarlint/issuestore/index.pb,9\f\9fe84ebb15faf917b7def6236dba604453cc61e0
