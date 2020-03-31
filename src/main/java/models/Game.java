@@ -12,7 +12,7 @@ public class Game {
     private static ArrayList<Team> allTeams;
     private ArrayList<League> leagues;
 
-    public Game(){
+    private Game(){
         allPlayers = new ArrayList<>();
         allTeams = new ArrayList<>();
         leagues = new ArrayList<>();

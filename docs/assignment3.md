@@ -19,10 +19,10 @@ Bullet list summarizing all the changes from Assignment 2 feedback:
  
 
 ### Application of design patterns
-Author(s): `name of the team member(s) responsible for this section`
+Author(s): `Teona Moga (Singleton) & Torstein Thomassen (Flyweight)`
 
-`Figure representing the UML class diagram in which all the applied design patterns are highlighted graphically (for example with a red rectangle/circle with a reference to the ID of the applied design pattern`
-
+`Figure representing the UML class diagram in which all the applied design patterns are highlighted graphically (blue cube)`
+![](imgs/dp.jpg)
 
 | ID  | DP1  |  
 |---|---|  
