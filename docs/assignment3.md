@@ -256,24 +256,33 @@ The state diagram above represents the different states a league can be in. When
 
 The state diagram above represents the state a Game can be in. It has three different properties that can be changes and accessed with different methods.   
 
-## Sequence diagrams									
-Author(s): `Noé Rousset`  & `Patricia Santana Vasquez`
 
+## Sequence diagrams									
+Author(s): `Teona Moga`, `Patricia Santana Vasquez`, `Noe Rousset`
 `Sequence diagram showing League creation and execution`
 ![](imgs/teamcreation.png)
 
-This sequence diagram shows the interaction of a player and the game when they attempting to create and add a new team to the system. This sequence happens when the user inputed data does not have an empty field or is duplicating a player that is already in the system. Either of those situations would cause the user to recieve an error message of "Missing player" or "Duplicate Players". If neither of those conditions are met the user can then create and add a new team.
+This sequence diagram represent how the creation of the player's team occur and the interactions between the game and team editor.
+The player represent by the actor element provides a list of players for his team in the team editor. Once the "Save Team" button is pressed, createTeam() is called.
+
+The team editor checks if the player selection is correct, as shown in the Alt fragment. If there are not enough players to create a team, showError() is called and displays an error message showing which fields are empty.
+If the same player appears multiple times in the selection, showError() is called and an error message is displayed. If an error occurs, createTeam() exits and the player must press "Save Team" to start again.
+
+If there are no errors, addTeam() is called, and :Game creates a new team object and adds it to the team pool.
 
 `Sequence diagram showing League creation and execution`
 ![](imgs/Sequence2League.png)
 
 This sequence diagrams shows the interactions between the player and the game to execute the league from a player provided schedule. This sequence happens when all teams have been made and the player starts the league simulation. 
-The player represented by the actor element provides a schedule with all the matches that will play in the first round to the game. 
+The player represented by the actor element provides a schedule with includes the number of matches and which teams will play in the first round.
 
-From this schedule a new League object is created. The league then starts with the playRound function. Here all the scheduled matches are played one by one in the Loop fragment. A match object is created and returns the winner of the match before being destroyed. The winning teams are added to the pool of teams playing next round. 
-
+Once the Start button is pressed, the league simulator checks for errors as shown in the alt fragment. If there are matches missing teams, showError is called and an error message is displayed. This causes the league execution to stop and the player has to hit the start button again.
+ 
+If there are no errors, the League object is created and the execution of the league begins.
+The league starts with the playRound function. Here all the scheduled matches are played one by one in the Loop fragment. A match object is created and returns the winner of the match before being destroyed. The winning teams are added to the pool of teams playing next round. 
 
 Once a round is over, the Alt fragment checks if there are more than one remaining team. If yes playRound is called recursively, as shown by the self-call element. The exit condition is one team remaining, and when it is met the results are sent to the game and the league object is destroyed.
+The full results are then displayed by LeagueSimulatorPane.
 
 
 ## Implementation									
