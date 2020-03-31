@@ -7,9 +7,15 @@ Maximum number of words for this document: 18000
 **Format**: establish formatting conventions when describing your models in this document. For example, you style the name of each class in bold, whereas the attributes, operations, and associations as underlined text, objects are in italic, etc.
 
 ### Summary of changes of Assignment 2
-Author(s): `name of the team member(s) responsible for this section`
+Author(s): `Torstein Thomassen`
 
-Provide a bullet list summarizing all the changes you performed in Assignment 2 for addressing our feedback.
+Bullet list summarizing all the changes from Assignment 2 feedback:
+
+- Changed object diagram, to represent the whole system, and not just parts of it.
+- Grammar changes and better names inside diagrams and implementation. (e.g not A, B or temp)
+- Better and more detailed diagrams. 
+- Continuity of coding style.
+ 
 
 Maximum number of words for this section: 1000
 
