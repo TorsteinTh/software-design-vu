@@ -257,10 +257,12 @@ The state diagram above represents the different states a league can be in. When
 The state diagram above represents the state a Game can be in. It has three different properties that can be changes and accessed with different methods.   
 
 ## Sequence diagrams									
-Author(s): `Teona Moga`
+Author(s): `Teona Moga`  & `Patricia Santana Vasquez`
 
 `Sequence diagram showing League creation and execution`
 ![](imgs/teamcreation.png)
+
+This sequence diagram shows the interaction of a player and the game when they attempting to create and add a new team to the system. This sequence happens when the user inputed data does not have an empty field or is duplicating a player that is already in the system. Either of those situations would cause the user to recieve an error message of "Missing player" or "Duplicate Players". If neither of those conditions are met the user can then create and add a new team.
 
 `Sequence diagram showing League creation and execution`
 ![](imgs/Sequence2League.png)
