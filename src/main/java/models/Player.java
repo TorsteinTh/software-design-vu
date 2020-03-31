@@ -3,16 +3,14 @@ package models;
 public class Player {
 
     private String name;
-    private int score;
+    private PlayerType type;
 
-    public Player(String name, int score){
+    public Player(String name, /*int score,*/ PlayerType type){
         this.name = name;
-        this.score = score;
+        this.type = type;
     }
 
-    public int getScore() {
-        return score;
-    }
+    public PlayerType getType() {return type;}
 
     public String getName() { return name; }
 }

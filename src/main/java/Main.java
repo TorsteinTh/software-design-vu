@@ -3,6 +3,8 @@ import javafx.application.Application;
 import javafx.stage.Stage;
 import models.Game;
 import models.Player;
+import models.PlayerFactory;
+import models.PlayerType;
 import views.MainMenuPane;
 import java.util.ArrayList;
 import java.util.List;
@@ -22,9 +24,10 @@ public class Main extends Application {
         SceneManager.getInstance().showPane(MainMenuPane.class);
     }
     public void generatePlayers() {
-        for(int i = 0; i < 100 /*TODO: change to a variable*/; i++){
-            Player tmpPlayer = new Player("Player" + i, getRandomNumberInRange(15, 25));
-            Game.getInstance().addPlayers(tmpPlayer);
+        for(int i = 0; i < 100; i++){
+            PlayerType type = PlayerFactory.getPlayerType("Player" + i, getRandomNumberInRange(15, 25));
+            Player player = new Player("Player" + i, type);
+            Game.getInstance().addPlayers(player);
         }
 
     }
@@ -37,10 +40,9 @@ public class Main extends Application {
 
             /* Adds random player to list */
             for (int j = 0; j < 11; j++) {
-                tmpTeam.add(players.get(getRandomNumberInRange(0, 99 /*num of players TODO: change to a variable*/)));
+                tmpTeam.add(players.get(getRandomNumberInRange(0, 99)));
             }
             Game.getInstance().addTeam(tmpTeam.toArray(new Player[0]), "Team " + i);
-
         }
         return;
     }

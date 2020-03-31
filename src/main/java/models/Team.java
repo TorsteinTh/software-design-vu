@@ -17,7 +17,7 @@ public class Team {
     }
 
     private int calculateScore(){
-        return Arrays.stream(players).mapToInt(Player::getScore).sum();
+        return Arrays.stream(players).mapToInt(player -> player.getType().getScore()).sum();
     }
 
     public int getTeamScore(){

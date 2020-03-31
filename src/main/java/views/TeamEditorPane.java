@@ -98,7 +98,7 @@ public class TeamEditorPane extends GamePane {
     void connectComponents() {
         
         for (int i = 0; i < fullPlayers.size(); i++){
-            playerNamesandScores.set(i, fullPlayers.get(i).getName() + ", Score: " + fullPlayers.get(i).getScore());
+            playerNamesandScores.set(i, fullPlayers.get(i).getName() + ", Score: " + fullPlayers.get(i).getType().getScore());
         }
 
         comboBox1 = new ComboBox<>(FXCollections.observableList(playerNamesandScores));
