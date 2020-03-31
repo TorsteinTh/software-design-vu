@@ -16,8 +16,7 @@ Bullet list summarizing all the changes from Assignment 2 feedback:
 - Better and more detailed diagrams. 
 - Continuity of coding style.
  
-
-Maximum number of words for this section: 1000
+ 
 
 ### Application of design patterns
 Author(s): `name of the team member(s) responsible for this section`
@@ -46,7 +45,7 @@ Author(s): `name of the team member(s) responsible for this section`
 | **Design pattern** | Lightweight  |  
 | **Problem** | Creating many object takes up a lot of memory, and makes extra computing |  
 | **Solution** | Creating all the object with shared properties referring to the same place in memory.  |  
-| **Intended use** | All Player object with the same data (score attribute) share the same memory (RAM).  |  
+| **Intended use** | All Player object with the same data (score attribute) share the same memory (RAM). This reduce the number of *Player* object created. |  
 | **Constraints** | N/A |  
 
 
@@ -225,15 +224,21 @@ Operations
 ## Object diagrams								
 Author(s): `Torstein Thomassen`
 
-This chapter contains the description of a "snapshot" of the status of your system during its execution. 
-This chapter is composed of a UML object diagram of your system, together with a textual description of its key elements.
+This object diagram shows an example of objects with different states in our program.
+All the different attributes and variables has be fulled in with example data.
 
-`Figure representing the UML class diagram`
+This structure resembles a tree structure with branches and leafs. The tree structure is commonly used in many software design. It's an efficient and a good way to structure the relation between objects. 
+
+This creates a hierarchy where a parent can only directly affect the children. E.g the **Match** can't affect the **Player** 'directly', only the **Team** objects.       
+
+`Figure representing the UML object diagram`
   
 ![](imgs/ass3%20objDiagram.png)
-`Textual description`
 
-Maximum number of words for this section: 1000
+The diagram above shows an example over the whole *Main* class. Where there is create a *Game* object, and the *Game* object again creates a *league* object. 
+This is a league with two matches. Each match has two teams playing against each other, and each team consist of 11 players.  
+ 
+ 
 
 ## State machine diagrams									
 Author(s): `Torstein Thomassen` & `Teona Moga`
@@ -249,21 +254,10 @@ The state diagram above represents the different states a league can be in. When
 `State diagram over Game Class`
 ![](imgs/ass3%20stateDiagram%20Game.png)
 
-The state diagram above represents the state a Game can be in. 
+The state diagram above represents the state a Game can be in. It has three different properties that can be changes and accessed with different methods.   
 
 ## Sequence diagrams									
-Author(s): `name of the team member(s) responsible for this section`
-
-This chapter contains the specification of at least 2 UML sequence diagrams of your system, together with a textual description of all its elements. Here you have to focus on specific situations you want to describe. For example, you can describe the interaction of player when performing a key part of the videogame, during a typical execution scenario, in a special case that may happen (e.g., an error situation), when finalizing a fantasy soccer game, etc.
-
-For each sequence diagram you have to provide:
-- a title representing the specific situation you want to describe;
-- a figure representing the sequence diagram;
-- a textual description of all its elements in a narrative manner (you do not need to structure your description into tables in this case). We expect a detailed description of all the interaction partners, their exchanged messages, and the fragments of interaction where they are involved. For each sequence diagram we expect a description of about 300-500 words.
-
-The goal of your sequence diagrams is both descriptive and prescriptive, so put the needed level of detail here, finding the right trade-off between understandability of the models and their precision.
-
-Maximum number of words for this section: 4000
+Author(s): `Teona Moga`
 
 `Sequence diagram showing League creation and execution`
 ![](imgs/teamcreation.png)
@@ -285,6 +279,7 @@ Author(s): `name of the team member(s) responsible for this section`
 
 
 `Video executing the program:`
+
 ![](imgs/gif.gif)
 
 In this chapter you will describe the following aspects of your project:

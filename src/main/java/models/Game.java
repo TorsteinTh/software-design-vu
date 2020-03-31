@@ -19,7 +19,6 @@ public class Game {
     }
 
     public void addPlayers(Player newPlayer){
-        //TODO
         allPlayers.add(newPlayer);
     }
 
@@ -32,7 +31,6 @@ public class Game {
     }
 
     public Player getPlayerByName(String name){
-
         for(Player player : allPlayers){
             if(player.getName().equals(name))
                 return player;
@@ -41,7 +39,6 @@ public class Game {
     }
 
     public void addTeam(Player[] players, String teamName){
-
         Team newTeam = new Team(players, teamName);
         if( this.getTeamByName(teamName) != null ) {
             this.getTeamByName(teamName).setPlayers(players);
@@ -52,7 +49,6 @@ public class Game {
     }
 
     public void createLeague(Queue<Team> schedule, int leagueId){
-
         leagues.add(new League(schedule, leagueId));
     }
 
@@ -65,7 +61,6 @@ public class Game {
     }
 
     public ArrayList<Team>  generateLeaderboard(){
-        //TODO
         ArrayList<Team> leaderboard = (ArrayList<Team>) allTeams.clone();
         Collections.sort(leaderboard, Comparator.comparingInt(Team::getTotalWins));
         return leaderboard;
