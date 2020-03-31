@@ -68,7 +68,7 @@ public class SceneManager {
     }
 
     public <T> T getPane( final Class<? extends GamePane> pane) {
-        //noinspection unchecked
+
         return (T) scenes.get(pane).getRoot();
     }
 

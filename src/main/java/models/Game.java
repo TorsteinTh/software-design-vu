@@ -90,13 +90,6 @@ public class Game {
         return allPlayers;
 
     }
-    public void removeTeam(String teamName){
-        //TODO
-    }
-
-    public void removePlayer(String playerName){
-        //TODO
-    }
 
     public static Game getInstance() {
         return GAME_INSTANCE;
