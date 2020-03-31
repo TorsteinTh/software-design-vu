@@ -7,9 +7,15 @@ Maximum number of words for this document: 18000
 **Format**: establish formatting conventions when describing your models in this document. For example, you style the name of each class in bold, whereas the attributes, operations, and associations as underlined text, objects are in italic, etc.
 
 ### Summary of changes of Assignment 2
-Author(s): `name of the team member(s) responsible for this section`
+Author(s): `Torstein Thomassen`
 
-Provide a bullet list summarizing all the changes you performed in Assignment 2 for addressing our feedback.
+Bullet list summarizing all the changes from Assignment 2 feedback:
+
+- Changed object diagram, to represent the whole system, and not just parts of it.
+- Grammar changes and better names inside diagrams and implementation. (e.g not A, B or temp)
+- Better and more detailed diagrams. 
+- Continuity of coding style.
+ 
 
 Maximum number of words for this section: 1000
 
@@ -37,11 +43,11 @@ Author(s): `name of the team member(s) responsible for this section`
 
 | ID  | DP3  |  
 |---|---|  
-| **Design pattern** |  |  
-| **Problem** | |  
-| **Solution** | |  
-| **Intended use** |  |  
-| **Constraints** |  |  
+| **Design pattern** | Lightweight  |  
+| **Problem** | Creating many object takes up a lot of memory, and makes extra computing |  
+| **Solution** | Creating all the object with shared properties referring to the same place in memory.  |  
+| **Intended use** | All Player object with the same data (score attribute) share the same memory (RAM).  |  
+| **Constraints** | N/A |  
 
 
 ## Class diagram									
@@ -224,7 +230,7 @@ This chapter is composed of a UML object diagram of your system, together with a
 
 `Figure representing the UML class diagram`
   
-![](imgs/ass3 objDiagram.png)
+![](imgs/ass3%20objDiagram.png)
 `Textual description`
 
 Maximum number of words for this section: 1000
@@ -241,7 +247,7 @@ The state diagram above represents the different states a league can be in. When
 
 
 `State diagram over Game Class`
-![](imgs/ass3 stateDiagram Game.png)
+![](imgs/ass3%20stateDiagram%20Game.png)
 
 The state diagram above represents the state a Game can be in. 
 
@@ -276,6 +282,10 @@ Once a round is over, the Alt fragment checks if there are more than one remaini
 
 ## Implementation									
 Author(s): `name of the team member(s) responsible for this section`
+
+
+`Video executing the program:`
+![](imgs/gif.gif)
 
 In this chapter you will describe the following aspects of your project:
 - the strategy that you followed when moving from the UML models to the implementation code;
