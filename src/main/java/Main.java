@@ -15,30 +15,29 @@ public class Main extends Application {
 
     @Override
     public void start(final Stage primaryStage) {
-
         generatePlayers();
         generateTeams();
-
 
         SceneManager.getInstance().setStage(primaryStage);
         SceneManager.getInstance().showPane(MainMenuPane.class);
     }
+
+    /* Generates 100 Players with a random score */
     public void generatePlayers() {
         for(int i = 0; i < 100; i++){
             PlayerType type = PlayerFactory.getPlayerType("Player" + i, getRandomNumberInRange(15, 25));
             Player player = new Player("Player" + i, type);
             Game.getInstance().addPlayers(player);
         }
-
     }
 
+    /* Generates 8 different teams with 11 random players */
     public void generateTeams(){
         ArrayList<Player> players = Game.getPlayers();
 
         for(int i = 0; i < 8; i++){
             ArrayList<Player> tmpTeam = new ArrayList<Player>();
 
-            /* Adds random player to list */
             for (int j = 0; j < 11; j++) {
                 tmpTeam.add(players.get(getRandomNumberInRange(0, 99)));
             }
