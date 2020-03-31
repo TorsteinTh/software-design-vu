@@ -299,6 +299,7 @@ When starting Assignment 3, we focused on implementing the remaing requirements 
 
 
 Location of the main Java class required for executing the system is: `software-design-vu/src/main/java/Main.java`
+Location of the main Java class required for executing the system is: `software-design-vu/out/artifacts/software_design_vu_jar/software-design-vu.jar`
 
 ## References
 
