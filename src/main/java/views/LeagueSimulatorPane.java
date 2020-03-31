@@ -12,6 +12,7 @@ import javafx.scene.layout.HBox;
 import javafx.scene.layout.VBox;
 import javafx.scene.paint.Color;
 
+import java.lang.reflect.Array;
 import java.util.*;
 
 import javafx.scene.text.Text;
@@ -29,6 +30,11 @@ public class LeagueSimulatorPane extends GamePane {
     private Label title = new Label("League Simulator");
     private final Button returnButton = new Button("Return");
     private final Button playButton = new Button("Start");
+    private final Button refreshButton = new Button("Clear");
+
+    private Label sizeLabel = new Label("League size:");
+    final ComboBox<String> size = new ComboBox<>();
+    private HBox sizeBox = new HBox();
 
     ArrayList<String > teamNames = GAME.getAllTeamNames();
 
@@ -80,6 +86,8 @@ public class LeagueSimulatorPane extends GamePane {
 
     private HBox matches7and8 = new HBox();
 
+    int currentLeagueId = 0;
+
 
     public LeagueSimulatorPane() {
         connectComponents();
@@ -90,7 +98,11 @@ public class LeagueSimulatorPane extends GamePane {
     @Override
     void connectComponents() {
 
-        leftContainer.getChildren().addAll(title, matchesContainer, playButton, returnButton);
+        leftContainer.getChildren().addAll(title, sizeBox, matchesContainer, playButton, refreshButton, returnButton);
+
+        size.getItems().addAll("8", "4", "2");
+        size.getSelectionModel().selectFirst();
+        sizeBox.getChildren().addAll(sizeLabel, size);
 
         matchBox1.getChildren().addAll(match1, comboBox1, comboBox2);
         matchBox2.getChildren().addAll(match2, comboBox3, comboBox4);
@@ -128,6 +140,7 @@ public class LeagueSimulatorPane extends GamePane {
         matchesContainer.setAlignment(Pos.CENTER);
 
         title.setStyle("-fx-font-size: 20;");
+        sizeLabel.setStyle("-fx-font-size: 16;");
 
         String bigButton = "    -fx-font-size: 15;\n" +
                 "    -fx-font-family: sans-serif;\n" +
@@ -137,43 +150,64 @@ public class LeagueSimulatorPane extends GamePane {
 
         returnButton.setStyle(bigButton);
         playButton.setStyle(bigButton);
+        refreshButton.setStyle(bigButton);
     }
 
     void createLeagueSchedule() throws Exception{
 
         Queue<Team> schedule = new LinkedList<>();
-        String[] teamNames = {comboBox1.getSelectionModel().getSelectedItem(),
-                comboBox2.getSelectionModel().getSelectedItem(),
-                comboBox3.getSelectionModel().getSelectedItem(),
-                comboBox4.getSelectionModel().getSelectedItem(),
-                comboBox5.getSelectionModel().getSelectedItem(),
-                comboBox6.getSelectionModel().getSelectedItem(),
-                comboBox7.getSelectionModel().getSelectedItem(),
-                comboBox8.getSelectionModel().getSelectedItem(),
-                comboBox9.getSelectionModel().getSelectedItem(),
-                comboBox10.getSelectionModel().getSelectedItem(),
-                comboBox11.getSelectionModel().getSelectedItem(),
-                comboBox12.getSelectionModel().getSelectedItem(),
-                comboBox13.getSelectionModel().getSelectedItem(),
-                comboBox14.getSelectionModel().getSelectedItem(),
-                comboBox15.getSelectionModel().getSelectedItem(),
-                comboBox16.getSelectionModel().getSelectedItem()};
+        int leagueSize = Integer.parseInt(size.getSelectionModel().getSelectedItem());
+        ArrayList<String> teamNames = new ArrayList<>();
 
-        for(int i = 0; i < teamNames.length; i++){
-            if(teamNames[i] != null)
-                schedule.add(GAME.getTeamByName(teamNames[i]));
+        if ( leagueSize == 8 ){
+            teamNames.addAll(Arrays.asList(comboBox1.getSelectionModel().getSelectedItem(),
+                    comboBox2.getSelectionModel().getSelectedItem(),
+                    comboBox3.getSelectionModel().getSelectedItem(),
+                    comboBox4.getSelectionModel().getSelectedItem(),
+                    comboBox5.getSelectionModel().getSelectedItem(),
+                    comboBox6.getSelectionModel().getSelectedItem(),
+                    comboBox7.getSelectionModel().getSelectedItem(),
+                    comboBox8.getSelectionModel().getSelectedItem(),
+                    comboBox9.getSelectionModel().getSelectedItem(),
+                    comboBox10.getSelectionModel().getSelectedItem(),
+                    comboBox11.getSelectionModel().getSelectedItem(),
+                    comboBox12.getSelectionModel().getSelectedItem(),
+                    comboBox13.getSelectionModel().getSelectedItem(),
+                    comboBox14.getSelectionModel().getSelectedItem(),
+                    comboBox15.getSelectionModel().getSelectedItem(),
+                    comboBox16.getSelectionModel().getSelectedItem()));
+        } else if (leagueSize == 4){
+            teamNames.addAll(Arrays.asList(comboBox1.getSelectionModel().getSelectedItem(),
+                    comboBox2.getSelectionModel().getSelectedItem(),
+                    comboBox3.getSelectionModel().getSelectedItem(),
+                    comboBox4.getSelectionModel().getSelectedItem(),
+                    comboBox5.getSelectionModel().getSelectedItem(),
+                    comboBox6.getSelectionModel().getSelectedItem(),
+                    comboBox7.getSelectionModel().getSelectedItem(),
+                    comboBox8.getSelectionModel().getSelectedItem()));
+
+        } else {
+            teamNames.addAll(Arrays.asList(comboBox1.getSelectionModel().getSelectedItem(),
+                    comboBox2.getSelectionModel().getSelectedItem(),
+                    comboBox3.getSelectionModel().getSelectedItem(),
+                    comboBox4.getSelectionModel().getSelectedItem()));
+        }
+
+        for(int i = 0; i < teamNames.size(); i++){
+            if(teamNames.get(i) != null)
+                schedule.add(GAME.getTeamByName(teamNames.get(i)));
             else
                 throw new Exception("Field empty");
         }
 
-        GAME.createLeague(schedule);
+        GAME.createLeague(schedule, currentLeagueId);
 
     }
 
 
     void displayWinners() {
 
-        HashMap<Integer, ArrayList<Team>> winners = GAME.getLeagueResults();
+        HashMap<Integer, ArrayList<Team>> winners = GAME.getLeagueResults(currentLeagueId);
 
         for (int round: winners.keySet()){
             int key = round;
@@ -195,6 +229,7 @@ public class LeagueSimulatorPane extends GamePane {
         }
 
         centerContainer.getChildren().remove(centerContainer.getChildren().size() - 1);
+        currentLeagueId++;
 
     }
 
@@ -204,19 +239,39 @@ public class LeagueSimulatorPane extends GamePane {
         centerContainer.getChildren().add(errorText);
     }
 
+    void refreshSelection() {
+        comboBox1.valueProperty().set(null);
+        comboBox2.valueProperty().set(null);
+        comboBox3.valueProperty().set(null);
+        comboBox4.valueProperty().set(null);
+        comboBox5.valueProperty().set(null);
+        comboBox6.valueProperty().set(null);
+        comboBox7.valueProperty().set(null);
+        comboBox8.valueProperty().set(null);
+        comboBox9.valueProperty().set(null);
+        comboBox10.valueProperty().set(null);
+        comboBox11.valueProperty().set(null);
+        comboBox12.valueProperty().set(null);
+        comboBox13.valueProperty().set(null);
+        comboBox14.valueProperty().set(null);
+        comboBox15.valueProperty().set(null);
+        comboBox16.valueProperty().set(null);
+    }
+
     @Override
     void setCallbacks() {
-         playButton.setOnMouseClicked(event -> {
-             centerContainer.getChildren().clear();
-             try {
-                 this.createLeagueSchedule();
-                 this.displayWinners();
-             } catch (Exception e) {
-                 this.showError("Please select teams for all matches.");
-             }
-         });
+        playButton.setOnMouseClicked(event -> {
+            centerContainer.getChildren().clear();
+            try {
+                this.createLeagueSchedule();
+                this.displayWinners();
+            } catch (Exception e) {
+                this.showError("Please select teams for all matches.");
+            }
+        });
 
-         returnButton.setOnMouseClicked(event -> SceneManager.getInstance().showPane((MainMenuPane.class)));
+        returnButton.setOnMouseClicked(event -> SceneManager.getInstance().showPane((MainMenuPane.class)));
+        refreshButton.setOnMouseClicked(event -> refreshSelection());
     }
 
     void updateTeams() {

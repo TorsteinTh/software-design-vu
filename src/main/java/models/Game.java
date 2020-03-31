@@ -10,11 +10,12 @@ public class Game {
 
     private static ArrayList<Player> allPlayers;
     private static ArrayList<Team> allTeams;
-    private League league;
+    private ArrayList<League> leagues;
 
     public Game(){
         allPlayers = new ArrayList<>();
         allTeams = new ArrayList<>();
+        leagues = new ArrayList<>();
     }
 
     public void addPlayers(Player newPlayer){
@@ -50,14 +51,17 @@ public class Game {
 
     }
 
-    public void createLeague(Queue<Team> schedule){
+    public void createLeague(Queue<Team> schedule, int leagueId){
 
-        league = new League(schedule);
+        leagues.add(new League(schedule, leagueId));
     }
 
-    public HashMap<Integer, ArrayList<Team>> getLeagueResults(){
-        //TODO
-        return league.getWinners();
+    public HashMap<Integer, ArrayList<Team>> getLeagueResults(int leagueId){
+        for(League league : leagues){
+            if( league.getId() == leagueId )
+                return league.getWinners();
+        }
+        return null;
     }
 
     public ArrayList<Team>  generateLeaderboard(){
