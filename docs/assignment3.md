@@ -42,8 +42,8 @@ Author(s): `name of the team member(s) responsible for this section`
 
 | ID  | DP3  |  
 |---|---|  
-| **Design pattern** | Lightweight  |  
-| **Problem** | Creating many object takes up a lot of memory, and makes extra computing |  
+| **Design pattern** | Flyweight  |  
+| **Problem** | Creating many objects takes up a lot of memory, and requires extra computing. Extending the project to use real-life data would increase the number of players multiple times over. |  
 | **Solution** | Creating all the object with shared properties referring to the same place in memory.  |  
 | **Intended use** | All Player object with the same data (score attribute) share the same memory (RAM). This reduce the number of *Player* object created. |  
 | **Constraints** | N/A |  
@@ -257,7 +257,7 @@ The state diagram above represents the different states a league can be in. When
 The state diagram above represents the state a Game can be in. It has three different properties that can be changes and accessed with different methods.   
 
 ## Sequence diagrams									
-Author(s): `Teona Moga`  & `Patricia Santana Vasquez`
+Author(s): `Noé Rousset`  & `Patricia Santana Vasquez`
 
 `Sequence diagram showing League creation and execution`
 ![](imgs/teamcreation.png)
@@ -277,23 +277,19 @@ Once a round is over, the Alt fragment checks if there are more than one remaini
 
 
 ## Implementation									
-Author(s): `name of the team member(s) responsible for this section`
+Author(s): `Teona Moga`
 
 
 `Video executing the program:`
 
 ![](imgs/gif.gif)
 
-In this chapter you will describe the following aspects of your project:
-- the strategy that you followed when moving from the UML models to the implementation code;
-- the key solutions that you applied when implementing your system (for example, how you implemented the syntax highlighting feature of your code snippet manager, how you manage fantasy soccer matches, etc.);
-- the location of the main Java class needed for executing your system in your source code;
-- the location of the Jar file for directly executing your system;
-- the 30-seconds video showing the execution of your system (you can embed the video directly in your md file on GitHub).
+The first step in our implementation process was coming up with very basic UML diagrams that outlined the basic classes and functionality required by the system. We followed an Agile approach, where we would go back and forth between our code and the diagrams, until we achieved the desired functionality.  
 
-IMPORTANT: remember that your implementation must be consistent with your UML models. Also, your implementation must run without the need from any other external software or tool. Failing to meet this requirement means 0 points for the implementation part of your project.
+When starting Assignment 3, we focused on implementing the remaing requirements that would result in a complete game experience for the user, such that now the system supports team creation and displays the leaderboard. The only major change is  how player data is generated - we first intended for the user to upload player data, but later decided to let the system do it, in order to make it more similar to the real experience. 
 
-Maximum number of words for this section: 2000
+
+Location of the main Java class required for executing the system is: `software-design-vu/src/main/java/Main.java`
 
 ## References
 
